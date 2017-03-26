@@ -1,8 +1,8 @@
 //plik.script
 //alert('test')
-var name = prompt('Wpisz swoje imię');
-alert('Witaj, Ula');
-console.log('Witaj, Ula');
+var name = prompt('Write your name');
+alert('Hello, Ula');
+console.log('Hello, Ula');
 
 //console.log(c); - error no define c
 
