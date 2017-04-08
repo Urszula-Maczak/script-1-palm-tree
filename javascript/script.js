@@ -1,10 +1,11 @@
 // .script
-var list = document.getElementByID('list'),
-	add = document.getElementByID('addElem');
+var list = document.getElementById('list');
+var addButton = document.getElementById('addElem');
 
-add.addEventListener('click', function() {
-	document.getElementByID('list').innerHTML += '<li>item</li>';
+addButton.addEventListener('click', function() {
+	var tablica = document.getElementsByTagName('li');
+	list.innerHTML += '<li>item ' + tablica.length + '</li>';
 })
-var newItem = document.getElementsByTagName('li');
-document.write(newItem.length);
+/*var newItem = document.getElementsByTagName('li');
+document.write(newItem.length);*/
 	
