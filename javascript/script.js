@@ -1,8 +1,9 @@
 // .script
 
 var withButtons = document.getElementsByClassName('button');
-	console.log(withButtons);
-	for (var i = 0; i < withButtons.length ; i++) {
-		alert(withButtons);
-		document.getElementsByClassName('button').innerHTML = withButtons;
+var table = withButtons[0];
+	console.log(table);
+	for (var i = 0; i < table.length ; i++) {
+		alert(table);
+		withButtons.innerHTML = table.length;
 	}
