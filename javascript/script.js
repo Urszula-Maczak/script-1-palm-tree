@@ -12,10 +12,3 @@ if (allNames.indexOf(newName) === -1) {
 
 allNames.push('Marian');
 console.log(allNames);
-
-var names = ['Asia', 'Kasia', 'Ola', 'Sylwia', 'Ola'];
-var indexOfOla = names.indexOf('Ola');
-
-console.log('szukana wartość znajduje się na ' + indexOfOla + ' pozycji tablicy');
-
-console.log(names[indexOfOla]);
