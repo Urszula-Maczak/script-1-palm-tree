@@ -2,7 +2,7 @@
 
 //Papugi i słonie
 
-var text = "Krowy koszą trawę, unosząćs się nad ziemią 15 centymetrów, na czerownych dywanach";
+var text = "Papugi koszą trawę, unosząc się nad ziemią 15 centymetrów, na czerownych dywanach";
 var animal = "Zielone słonie";
 var animalUpperCased = animal.toUpperCase();
 
@@ -13,6 +13,6 @@ var textChangedForAnimal = text.replace(chooseFirstWord, animal);
 
 console.log(textChangedForAnimal);
 
-var partOfText = textChangedForAnimal.slice(0,46);
+var partOfText = textChangedForAnimal.slice('<br/>');
 
 console.log(partOfText);
