@@ -1,16 +1,22 @@
-//ŁĄCZYMY TABLICE
-var femaleNames = ['Asia', 'Kasia', 'Ola', 'Jola'];
-var maleNames = ['Piotrek', 'Marek', 'Arek', 'Jarek'];
-var allNames = femaleNames.concat(maleNames);
-
-console.log(allNames);
-
-var	newName = "Marian"
-if (allNames.indexOf(newName) === -1.) {
-	console.log('Wyrażenie jest spełnione');
-} else {
-	console.log(allNames[newName])
+//choinka
+//	var level = 5; 
+function drawTree(level) {
+	for (var i = 1; i <= level; i++) {
+		
+		var star = '';
+		for (var j = 0; j < i*2-1; j++) {
+			var star +='*';
+		}
+		//console.log(star); - nierówna choinka
+		console.log(' '.repeat(level - i) + '*'.repeat(i*2-1));		
+	}
 }
+drawTree(5);
 
-var x = allNames.push('Marian');
-console.log(allNames);
+/*Notatki:
+level - ilość poziomów (parametr funkcji albo zmienna)
+i - liczba aktualnego poziomu
+j - liczy ilość iteracji (powtarzanie się pętli)
+i*2-1 - ciąg, który liczy ilość gwiazdek dla danego poziomu
+
+
