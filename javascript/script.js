@@ -3,7 +3,7 @@ function getTriangleArea(a, h) {
 	if (a > 0 && h > 0) {
 		return a * h /2;
 		//console.log('Wartość większa od zera');
-	} else if (a <= 0 || h <= 0) {
+	} else /*if (a <= 0 || h <= 0) - niepotrzebne */ {
 		return 'Naprawidłowe dane';
 	}
 	//return a * h /2; przeniesione na wyżej
