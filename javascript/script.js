@@ -8,7 +8,7 @@ var pickRock = document.getElementById('js-playerPick_rock'),
     pickScissors = document.getElementById('js-playerPick_scissors');
 
 pickRock.addEventListener('click', function() { playerPick('rock') });
-pickPaper.addEventListener('click', function() { playerPick('paper') });
+pickPaper.addEventListener('click', function() { playerPick('paper') });     
 pickScissors.addEventListener('click', function() { playerPick('scissors') });
 
 var gameState = 'notStarted',  //started // ended
@@ -55,11 +55,6 @@ function newGame() {
     playerNameElem.innerHTML = player.name;
     setGamePoints(); 
   }
-
-}
-
-function playerPick(playerPick) {
-    console.log(playerPick);
 }
 
 function getComputerPick() {
@@ -72,12 +67,6 @@ var playerPickElem = document.getElementById('js-playerPick'),
     playerResultElem = document.getElementById('js-playerResult'),
     computerResultElem = document.getElementById('js-computerResult');
 
-function playerPick(playerPick) {
-    var computerPick = getComputerPick();
-    
-    playerPickElem.innerHTML = playerPick;
-    computerPickElem.innerHTML = computerPick;
-}
 
 function checkRoundWinner(playerPick, computerPick) {
   playerResultElem.innerHTML = computerResultElem.innerHTML = '';
@@ -94,32 +83,17 @@ function checkRoundWinner(playerPick, computerPick) {
         winnerIs = 'computer';
     }
 
-function playerPick(playerPick) {
-    var computerPick = getComputerPick();
-    
-    playerPickElem.innerHTML = playerPick;
-    computerPickElem.innerHTML = computerPick;
-    
-    checkRoundWinner(playerPick, computerPick);
-}
-
-function setGamePoints() {
-    playerPointsElem.innerHTML = player.score;
-    computerPointsElem.innerHTML = computer.score;
-}
-
-    if (winnerIs == 'player') {
+   if (winnerIs == 'player') {
         playerResultElem.innerHTML = "Wygrana!";
         player.score++;
     } else if (winnerIs == 'computer') {
         computerResultElem.innerHTML = "Wygrana!";
         computer.score++;
     }
-
 }
 
 function playerPick(playerPick) {
-    var computerPick = getComputerPick();
+	var computerPick = getComputerPick();
     
     playerPickElem.innerHTML = playerPick;
     computerPickElem.innerHTML = computerPick;
@@ -128,6 +102,9 @@ function playerPick(playerPick) {
 }
 
 function setGamePoints() {
-    playerPointsElem.innerHTML = player.score;
+	console.log(setGamePoints);
+	playerPointsElem.innerHTML = player.score;
     computerPointsElem.innerHTML = computer.score;
+
+    checkRoundWinner(playerPointsElem, computerPointsElem);
 }
